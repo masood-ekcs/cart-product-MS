@@ -1,0 +1,17 @@
+<h1>Hamara Cart</h1>
+
+<ng-container *ngIf="cartTotal==0">
+    <h4><i>Your Cart is Empty!</i>
+        <br>
+        <pre>       Let's do shopping :)</pre>
+    </h4>
+</ng-container>
+
+
+<ul>
+    <li *ngFor="let singleProduct of cartDB">{{singleProduct.name}} {{singleProduct.price}} <button
+            (click)="deleteFromCart(singleProduct.id)">Delete</button>
+    </li>
+</ul>
+
+<app-cart-total *ngIf="cartTotal!=0" [totalCost]="cartTotal"></app-cart-total>

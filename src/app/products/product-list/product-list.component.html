@@ -1,0 +1,7 @@
+<h1>Hamara Store</h1>
+<ul>
+    <li *ngFor="let singleProduct of productsDB" (click)="selectedProduct = singleProduct">{{singleProduct.name}}
+    </li>
+</ul>
+<app-product-info (addToCart)="updateCartData($event)" *ngIf="selectedProduct"
+    [singleProduct]="selectedProduct"></app-product-info>

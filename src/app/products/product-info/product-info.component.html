@@ -1,0 +1,14 @@
+<hr>
+<h1>Product Details</h1>
+<h3>{{singleProduct.name}} &nbsp;
+    <button (click)="cartClick(singleProduct.id)">Add to Cart</button>
+</h3>
+<ul>
+    <li>Cost: {{singleProduct.price | currency: 'Rs. '}}</li>
+    <li>Quantity: {{singleProduct.qty}}</li>
+    <li>Description:</li>
+    <ul>
+        <li *ngFor="let descriptionItem of singleProduct.description">{{descriptionItem}}</li>
+    </ul>
+
+</ul>

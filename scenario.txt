@@ -1,0 +1,5 @@
+**** Angular Componenets
+
+--- There is a Componenet Concept known as 
+    - Smart Components -> They know what's happing in the application / componenet
+    - Dumb Componenets -> Just handels the UI and Input / Output
